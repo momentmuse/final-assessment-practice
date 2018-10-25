@@ -1,7 +1,6 @@
 const express = require('express');
 const app = express();
 // const router = require('.router');
-const port = 3000;
 
 // enable CORS
 app.use((req, res, next) => {
@@ -17,10 +16,6 @@ app.use(express.json());
 // Connect app to router
 // app.use(router);
 
-app.listen(port, err => {
-  if (err) return console.log('Oh no!', err);
-  console.log(`🚀 Express server is listening to port ${port}!`);
-});
-
-// Where should I listen to the server?
-// Put it in the app start, after you connect to your database
+// Export the app configuration!
+module.exports = app;
+// Listen to the server in start.js, after you connect to your database
