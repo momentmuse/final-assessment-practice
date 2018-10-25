@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-// const router = require('.router');
+const router = require('./router');
 
 // enable CORS
 app.use((req, res, next) => {
@@ -14,7 +14,7 @@ app.use((req, res, next) => {
 app.use(express.json());
 
 // Connect app to router
-// app.use(router);
+app.use(router);
 
 // Export the app configuration!
 module.exports = app;
