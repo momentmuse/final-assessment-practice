@@ -4,8 +4,8 @@ const router = express.Router();
 const controllers = require('./controllers/topic-controllers');
 
 router
-  // .get('/topics', controllers.getAllTopics)
-  // .post('/topics', controllers.saveNewTopic)
+  .get('/topics', controllers.getAllTopics)
+  .post('/topics', controllers.saveNewTopic)
   // .delete('/topics/:id', controllers.deleteTopic)
   // .put('/topics/:id/up', controllers.upvoteTopic)
   // .put('/topics/:id/down', controllers.downvoteTopic)
